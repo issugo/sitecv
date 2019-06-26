@@ -1,0 +1,215 @@
+@media screen and (min-width: 400px) {
+    /* boutton de la nav */
+
+    #burger-button {
+        position: absolute;
+        z-index: 9999;
+        /*so it never gets lost under something*/
+        display: inline-block;
+        vertical-align: top;
+        height: 15px;
+        width: 20px;
+        margin-left: 1%;
+        top: 50vh;
+    }
+
+    #burger-button:hover {
+        cursor: pointer;
+        /* changes the cursor to pointer */
+    }
+
+    #burger-button > span {
+        display: block;
+        height: 3px;
+        margin-bottom: 3px;
+        width: 20px;
+        background-color: black;
+        -webkit-transition-timing-function: linear;
+        /* Safari and Chrome */
+        transition-timing-function: linear;
+        transition-duration: 1s;
+    }
+
+
+    #burger-button.open > span:first-child {
+        -webkit-transform: translateY(6px) rotate(45deg);
+        /* Chrome, Safari, Opera */
+        transform: translateY(6px) rotate(45deg);
+    }
+
+
+    #burger-button.open > span:nth-child(2) {
+        -webkit-transform: rotateY(90deg);
+        /* Safari */
+        transform: rotateY(90deg);
+        /* rotates the second child on the Y AXIS ONLY 90 degrees so it disappears into a point */
+    }
+
+    #burger-button.open > span:last-child {
+        -webkit-transform: translateY(-6px) rotate(-45deg);
+        /* Chrome, Safari, Opera */
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
+    /* navbar */
+
+    .navbar {
+        position: absolute;
+        opacity: .9;
+        z-index: 888;
+        /*so its above the content but below the burger button*/
+        height: 100vh;
+        width: 27vw;
+        left: -27vw;
+        transition: 1s;
+        background-color: white;
+        color: black;
+    }
+
+    .navbar.open {
+        left: 0;
+        padding-left: 3vw;
+    }
+
+    .navbar ul {
+        list-style: none;
+        margin-top: 30vh;
+        font-size: 1.5em;
+    }
+
+    .navbar ul li {
+        border-bottom: 1px solid black;
+        margin-bottom: 10px;
+        padding: 5px;
+        text-align: left;
+    }
+
+    .navbar ul li:hover {
+        cursor: pointer;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: grey;
+    }
+
+    /* sidebar */
+
+    #sidebar {
+        position: absolute;
+        height: 100vh;
+        width: 3.5vw;
+        background-color: white;
+        opacity: 1;
+        z-index: 887;
+        transition: 1s;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    /* boutton de la nav */
+
+    #burger-button {
+        position: absolute;
+        z-index: 9999;
+        /*so it never gets lost under something*/
+        display: inline-block;
+        vertical-align: top;
+        height: 15px;
+        width: 15px;
+        margin-left: 1%;
+        top: 50vh;
+    }
+
+    #burger-button:hover {
+        cursor: pointer;
+        /* changes the cursor to pointer */
+    }
+
+    #burger-button > span {
+        display: block;
+        height: 3px;
+        margin-bottom: 3px;
+        width: 15px;
+        background-color: black;
+        -webkit-transition-timing-function: linear;
+        /* Safari and Chrome */
+        transition-timing-function: linear;
+        transition-duration: 1s;
+    }
+
+
+    #burger-button.open > span:first-child {
+        -webkit-transform: translateY(6px) rotate(45deg);
+        /* Chrome, Safari, Opera */
+        transform: translateY(6px) rotate(45deg);
+    }
+
+
+    #burger-button.open > span:nth-child(2) {
+        -webkit-transform: rotateY(90deg);
+        /* Safari */
+        transform: rotateY(90deg);
+        /* rotates the second child on the Y AXIS ONLY 90 degrees so it disappears into a point */
+    }
+
+    #burger-button.open > span:last-child {
+        -webkit-transform: translateY(-6px) rotate(-45deg);
+        /* Chrome, Safari, Opera */
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
+    /* navbar */
+
+    .navbar {
+        position: absolute;
+        opacity: .9;
+        z-index: 888;
+        /*so its above the content but below the burger button*/
+        height: 100vh;
+        width: 27vw;
+        left: -27vw;
+        transition: 1s;
+        background-color: white;
+        color: black;
+    }
+
+    .navbar.open {
+        left: 0;
+        padding-left: 3vw;
+    }
+
+    .navbar ul {
+        list-style: none;
+        margin-top: 30vh;
+        font-size: 1em;
+    }
+
+    .navbar ul li {
+        border-bottom: 1px solid black;
+        margin-bottom: 10px;
+        padding: 5px;
+        text-align: left;
+    }
+
+    .navbar ul li:hover {
+        cursor: pointer;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: grey;
+    }
+
+    /* sidebar */
+
+    #sidebar {
+        position: absolute;
+        height: 100vh;
+        width: 6vw;
+        background-color: white;
+        opacity: 1;
+        z-index: 887;
+        transition: 1s;
+    }
+}
