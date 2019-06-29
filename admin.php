@@ -29,6 +29,7 @@ if (!isset($_SESSION['administrateur']) || $_SESSION['administrateur'] != 'true'
     $query0 = $cnx->query('SELECT * FROM competences');
     
     //on affiche le tableau de compétences
+    echo "<div class='section'>";
     echo "<table>";
         echo"<caption>Tableau des compétences</caption>";
         echo "<tr>";
@@ -83,6 +84,7 @@ if (!isset($_SESSION['administrateur']) || $_SESSION['administrateur'] != 'true'
         echo "<input type='file' name='nouveauVisu' id='nouveauVisu' accept='.jpg,.jpeg,.png' />";
         echo "<input type='submit' name='modifier' value='modifier' />";
     echo "</form>";
+    echo "</div>";
     
     //bouton de deconnection
     echo "<form action='#' method='post'>

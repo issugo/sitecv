@@ -45,6 +45,10 @@
     .pt-5 {
         padding-top: 5vh;
     }
+    
+    .pb-5 {
+        padding-bottom: 5vh;
+    }
 
     .bg-blue {
         background-color: deepskyblue;
@@ -145,6 +149,10 @@
 
     .pt-5 {
         padding-top: 5vh;
+    }
+    
+    .pb-5 {
+        padding-bottom: 5vh;
     }
 
     .bg-blue {

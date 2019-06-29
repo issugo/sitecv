@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+}
+
+/* on arrange l'image de profil */
+#imgProfil {
+    border-radius: 90px;
+}
+
+/* on définit les sections */
+.section {
+    margin: auto;
+    width: 300px;
+    height: 500px;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.section:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* on gère les items de section */
+.un {
+    display: flex;
+}
+
+.deux {
+    margin: auto;
+}
+
+.section > img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+/* css particulier pour chaque section */
+#section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

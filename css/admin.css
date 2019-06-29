@@ -1,3 +1,7 @@
+body {
+    background-color: #DAFFEF;
+}
+
 table {
     border-collapse: collapse;
 }
@@ -8,4 +12,11 @@ td, th {
 
 #premiereLigne {
     font-weight: bold;
+}
+
+.section {
+    background-color: white;
+    max-width: 400px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    padding: 3px;
 }

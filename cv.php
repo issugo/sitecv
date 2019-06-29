@@ -13,6 +13,9 @@
 <!-- style navbar -->
 <link rel='stylesheet' href='css/navbar.css'>
     
+<!-- style cv -->
+<link rel='stylesheet' href='css/cv.css'>
+    
 <!-- titre de la page -->
 <title>CV | MARGAIL Maurin</title>
 
@@ -55,6 +58,48 @@
         <span></span>
     </div>
     <div id='sidebar'></div>
+    
+    <!-- titre -->
+    <div class='center'>
+        <h1 class='noMargin pt-5 pb-5'>MON CV</h1>
+    </div>
+    
+    <!-- section du cv -->
+    <div class='container'>
+        <!-- on include la BDD -->
+        <?php include 'script_php/connectionBDD.php'; ?>
+        <!-- première partie -->
+        <div class='section' id='section1'>
+            <img src='img/maurin.jpg' alt='maurin tête' id='imgProfil'>
+            <span>MARGAIL MAURIN</span>
+            <p>Bonjour, je m'appelle Maurin MARGAIL, j'adore développer et faire du sport. J'aime aussi apprendre régulièrement à utiliser de nouvelles techologies.</p>
+        </div>
+        
+        <!-- deuxième partie -->
+        <div class='section' id='section2'>
+            <?php
+            
+            $query0 = $cnx->query("SELECT * FROM competences;");
+            while ($data0 = $query0->fetch()) {
+                echo "<div class='un'>";
+                echo "<img src='" .$data0['lien_visu'] ."' alt='" . $data0['nom'] . "'>";
+                for ($i=0; $i<intval($data0['niveau']); $i++) {
+                    echo "<i class='far fa-thumbs-up deux'></i>";
+                }
+                for ($j=0; $j<5-(intval($data0['niveau']));$j++) {
+                    echo "<i class='far fa-thumbs-down deux'></i>";
+                }
+                echo "</div>";
+            }
+            
+            ?>
+        </div>
+        
+        <!-- troisième partie -->
+        <div class='section' id='section3'>
+            <h4>Projets :</h4>
+        </div>
+    </div>
 
     <!-- footer -->
     <footer>
