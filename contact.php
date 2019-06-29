@@ -4,6 +4,8 @@
 <meta description='maurin-margail.ovh est le site présentant maurin margail, étudiant au campus ynov Aix, ainsi que ses projets et ses compétences'>
 <meta keywords='maurin, margail, MAURIN, MARGAIL, ynov, étudiant, développeur, junior, présentation, accueil'>
 
+<title>contact | MARGAIL Maurin</title>
+
 <!-- font awesome -->
 <script src="https://kit.fontawesome.com/092f13097c.js"></script>
 
@@ -13,9 +15,12 @@
 <!-- style navbar -->
 <link rel='stylesheet' href='css/navbar.css'>
 
+<!-- style contact form -->
+<link rel='stylesheet' href='css/contact.css'>
+
 <body>
     <!-- barre de navigation -->
-    <div class='navbar' id='navId'>
+    <nav class='navbar' id='navId'>
 
         <!-- lien de la navbar -->
         <ul class='side-nav'>
@@ -45,19 +50,55 @@
             </li>
         </ul>
 
-    </div>
+    </nav>
+    <!-- bouton d'ouverture du menu -->
     <div id='burger-button'>
         <span></span>
         <span></span>
         <span></span>
     </div>
+    <!-- sidebar -->
     <div id='sidebar'></div>
+
+    <!-- div vide pour l'alert -->
+    <div id="alertPanel"></div>
+
+    <!-- formulaire de contact -->
+    <div id="wrapper">
+        <form name="" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="clearfix">
+            <label for="nom" class="iconic user">Nom<span class="required">*</span></label>
+            <input type="text" name="nom" id="nom" required="required" placeholder="Quel est votre nom?" />
+            <label for="email" class="iconic mail-alt">E-mail<span class="required">*</span></label>
+            <input type="email" name="email" id="mail" required="required" placeholder="Quel est votre email?" />
+            <label for="message" class="iconic messsage">Message<span class="required">*</span></label>
+            <textarea name="message" id="message" required="required" placeholder="Quel est votre question?"></textarea>
+            <p class="indication"> Tous les champs avec une <span class="required">*</span> sont nécessaire</p>
+            <input type="submit" name='submit' value=" ★ envoyez l'e-mail !" />
+        </form>
+    </div>
+
+    <footer>
+
+    </footer>
 
     <!-- JQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <!-- script navbar -->
-    <script src='js/script.js'></script>
+    <script src='js/navbar.js'></script>
 </body>
 
 </html>
+
+<?php
+    if(isset($_POST ['submit'])) {
+        //on récupère les infos
+        $nom = htmlentities($_POST['nom']);
+        $email = htmlentities($_POST['email']);
+        $message = htmlentities($_POST['message']);
+        //on envoie le mail
+        mail("contact@maurin-margail.ovh", "question depuis mon site", "question de $nom, $email\n$message");
+        //on prévient de l'envoie du mail
+        echo "<script>alert('Votre mail a bien été envoyé')</script>";
+    }
+?>

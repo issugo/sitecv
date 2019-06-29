@@ -53,11 +53,15 @@
     </div>
     <div id='sidebar'></div>
 
+    <footer>
+
+    </footer>
+
     <!-- JQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <!-- script navbar -->
-    <script src='js/script.js'></script>
+    <script src='js/navbar.js'></script>
 </body>
 
 </html>

@@ -17,3 +17,11 @@ footer {
     width: 100vw;
     z-index: 886;
 }
+
+a:hover {
+    color: #69f;
+}
+
+.center {
+    text-align: center;
+}

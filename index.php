@@ -12,7 +12,7 @@
 
 <!-- style navbar -->
 <link rel='stylesheet' href='css/navbar.css'>
-    
+
 <!-- roboto font -->
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
@@ -56,15 +56,19 @@
     </div>
     <div id='sidebar' class='opacityMax'></div>
 
+    <footer>
+
+    </footer>
+
     <!-- JQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <!-- script navbar -->
-    <script src='js/script.js'></script>
+    <script src='js/navbar.js'></script>
 </body>
-    
-    <footer>
-    
-    </footer>
+
+<footer>
+
+</footer>
 
 </html>
