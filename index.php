@@ -15,6 +15,9 @@
 
 <!-- roboto font -->
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    
+<!-- titre de la page -->
+<title>Accueil | MARGAIL Maurin</title>
 
 <body>
     <!-- barre de navigation -->
@@ -89,7 +92,7 @@
         </div>
     </div>
     
-
+    <!-- footer -->
     <footer>
 
     </footer>

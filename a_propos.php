@@ -12,6 +12,9 @@
 
 <!-- style navbar -->
 <link rel='stylesheet' href='css/navbar.css'>
+    
+<!-- titre de la page -->
+<title>A_propos | MARGAIL Maurin</title>
 
 <body>
     <!-- barre de navigation -->
@@ -52,7 +55,41 @@
         <span></span>
     </div>
     <div id='sidebar'></div>
-
+    
+    <!-- titre -->
+    <div class='center'>
+        <h1 class='noMargin pt-5'>A PROPOS DE MOI</h1>
+    </div>
+    
+    <!-- carte 1 -->
+    <div class='card' id='card1'>
+        <div class='card-header'>
+            <span>Des projets ?</span>
+        </div>
+        <div class='card-body'>
+            <p>Lors de ma "scolarité" au sein d'ynov, j'ai eu l'occasion de traiter et d'accomplir différents projets, qu'il soit lier à l'enseignement ou horzs enseignement au sein de mon association.</p>
+        </div>
+        <div class='card-footer'>
+            <span>Si vous voir mes projets :</span>
+            <a href='projets.php'><button class='bg-blue suivant'>projets</button></a>
+        </div>
+    </div>
+    
+    <!-- carte 2 -->
+    <div class='card' id='card2'>
+        <div class='card-header'>
+            <span>Curriculum vitae</span>
+        </div>
+        <div class='card-body'>
+            <p>Peut-être avez-vous réussi à me cerner, ou alors vous préferer avoir un résumé de mes compétences et expériences, je vous invite donc à aller sur ma page CV</p>
+        </div>
+        <div class='card-footer'>
+            <span>CV :</span>
+            <a href='cv.php'><button class='bg-blue suivant'>CV</button></a>
+        </div>
+    </div>
+    
+    <!-- footer -->
     <footer>
 
     </footer>

@@ -12,6 +12,9 @@
 
 <!-- style navbar -->
 <link rel='stylesheet' href='css/navbar.css'>
+    
+<!-- titre de la page -->
+<title>CV | MARGAIL Maurin</title>
 
 <body>
     <!-- barre de navigation -->
@@ -53,6 +56,7 @@
     </div>
     <div id='sidebar'></div>
 
+    <!-- footer -->
     <footer>
 
     </footer>

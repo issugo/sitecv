@@ -22,3 +22,6 @@ if (!isset($_SESSION['administrateur']) || $_SESSION['administrateur'] != 'true'
           </form>";
 }
 ?>
+
+<!-- titre de la page -->
+<title>Admin | MARGAIL Maurin</title>

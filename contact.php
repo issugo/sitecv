@@ -77,6 +77,7 @@
         </form>
     </div>
 
+    <!-- footer -->
     <footer>
 
     </footer>

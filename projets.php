@@ -12,6 +12,9 @@
 
 <!-- style navbar -->
 <link rel='stylesheet' href='css/navbar.css'>
+    
+<!-- titre de la page -->
+<title>Projets | MARGAIL Maurin</title>
 
 <body>
     <!-- barre de navigation -->
@@ -52,7 +55,8 @@
         <span></span>
     </div>
     <div id='sidebar'></div>
-
+    
+    <!-- footer -->
     <footer>
 
     </footer>

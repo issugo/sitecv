@@ -25,4 +25,8 @@ if (isset($_SESSION['administrateur']) && $_SESSION['administrateur'] == 'true')
     header('Location: admin.php');
     exit();
 }
-     ?>
+
+?>
+
+<!-- titre de la page -->
+<title>Connection | MARGAIL Maurin</title>
