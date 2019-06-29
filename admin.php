@@ -67,7 +67,7 @@ if (!isset($_SESSION['administrateur']) || $_SESSION['administrateur'] != 'true'
     
     //formulaire de modification de compétences
     echo "<span>Modifier une competence</span>";
-    echo "<form action='#' method='post'>";
+    echo "<form action='script_php/modifCompetence.php' method='post' enctype='multipart/form-data'>";
         echo "<select name='idCompAChanger' id='idCompAChanger' onchange='actualisationModif()'>";
             for ($i=1; $i<=$dernierID; $i++) {
                 echo "<option value='" . $i . "'>" . $i . "</option>";
@@ -83,7 +83,6 @@ if (!isset($_SESSION['administrateur']) || $_SESSION['administrateur'] != 'true'
         echo "<input type='file' name='nouveauVisu' id='nouveauVisu' accept='.jpg,.jpeg,.png' />";
         echo "<input type='submit' name='modifier' value='modifier' />";
     echo "</form>";
-    var_dump($_FILES);
     
     //bouton de deconnection
     echo "<form action='#' method='post'>

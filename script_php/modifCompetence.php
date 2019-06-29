@@ -22,11 +22,12 @@ if (isset($_SESSION['administrateur']) && $_SESSION['administrateur'] == 'true')
             var_dump($_FILES);
             //on recupere l'image sur le serveur
             $name = basename($_FILES['nouveauVisu']['name']);
+            $cheminUpload = '../img/' . $name;
             $chemin = 'img/' . $name;
-            if (move_uploaded_file($_FILES['nouveauVisu']['tmp_name'], $chemin)) {
+            if (move_uploaded_file($_FILES['nouveauVisu']['tmp_name'], $cheminUpload)) {
                 //on rentre tout dans la BDD
-                $query0 = $cnx->prepare("UPDATE competences SET nom = :nom, niveau = :niveau, lien_visu = :lien");
-                $query0->execute(['nom' => $nom, 'niveau' => $niveau, 'lien' => $chemin]);
+                $query0 = $cnx->prepare("UPDATE competences SET nom = :nom, niveau = :niveau, lien_visu = :lien WHERE id_comp = :id");
+                $query0->execute(['nom' => $nom, 'niveau' => $niveau, 'lien' => $chemin, 'id' => $id]);
             } else {
                 //si on a raté
                 http_response_code(503);
