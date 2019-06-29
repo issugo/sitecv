@@ -1,0 +1,14 @@
+body {margin:0}
+
+p {
+	color: white;
+	font-family: "helvetica";
+	font-size: 18px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 10%;
+	margin: auto;
+	text-align: center;
+	width: 600px;
+}

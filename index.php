@@ -26,7 +26,7 @@
             <li class='nav-item'>
                 <a href='index.php' class='nav-link'>Accueil</a>
             </li>
-            <!-- item a proposl -->
+            <!-- item a propos -->
             <li class='nav-item'>
                 <a href='a_propos.php' class='nav-link'>A propos</a>
             </li>
@@ -55,6 +55,40 @@
         <span></span>
     </div>
     <div id='sidebar' class='opacityMax'></div>
+    
+    <!-- titre -->
+    <div class='center'>
+        <h1 class='noMargin pt-5'>BIENVENU SUR LE SITE DE <strong>MARGAIL MAURIN</strong></h1>
+    </div>
+    
+    <!-- carte 1 -->
+    <div class='card' id='card1'>
+        <div class='card-header'>
+            <span>Qui suis-je ?</span>
+        </div>
+        <div class='card-body'>
+            <p>Je suis MARGAIL Maurin, actuellement élève au campus <a rel='external' href='www.ynov.com/Aic-en-Provence'ynov Aix>Ynov Aix</a> et j'aspire à devenir développeur backend.</p>
+        </div>
+        <div class='card-footer'>
+            <span>Si vous souhaitez en savoir plus :</span>
+            <a href='a_propos.php'><button class='bg-blue suivant'>a propos</button></a>
+        </div>
+    </div>
+    
+    <!-- carte 2 -->
+    <div class='card' id='card2'>
+        <div class='card-header'>
+            <span>On se connait ?!</span>
+        </div>
+        <div class='card-body'>
+            <p>Si vous me connaissez déjà, vous savez que je travaille dans l'association <strong>CreatiWeb</strong> et que nolus faisons des sites web pour vous</p>
+        </div>
+        <div class='card-footer'>
+            <span>Nos tarifs :</span>
+            <a href='tarifs.php'><button class='bg-blue suivant'>tarifs</button></a>
+        </div>
+    </div>
+    
 
     <footer>
 
