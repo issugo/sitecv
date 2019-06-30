@@ -1,74 +1,171 @@
-@media screnn and (max-width: 400px) {
-    body {
-        overflow-y: visible;
+@keyframes apparition {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
-.container {
-    display: flex;
-    margin-left: 3.5vw;
+@media screen and (max-width: 400px) {
+    #sidebar {
+        position: fixed;
+    }
+
+    #burger-button {
+        position: fixed;
+    }
+
+    footer {
+        position: fixed;
+    }
+
+    body {
+        overflow-y: visible;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 3.5vw;
+    }
+
+    /* on arrange l'image de profil */
+    #imgProfil {
+        border-radius: 90px;
+    }
+
+    /* on définit les sections */
+    .section {
+        text-align: center;
+        margin: auto auto 4vh auto;
+        width: 280px;
+        height: 500px;
+        background-color: white;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        animation: apparition 4s;
+    }
+
+    .section:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+
+    /* on gère les items de section */
+    .un {
+        display: flex;
+    }
+
+    .deux {
+        margin: auto;
+    }
+
+    .section > img {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .section > h3 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* css particulier pour chaque section */
+    #section1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;   
+    }
+
+    #section2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #section3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #section4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 19vh;
+    }
 }
 
-/* on arrange l'image de profil */
-#imgProfil {
-    border-radius: 90px;
-}
+@media screen and (min-width: 400px) {
+    .container {
+        display: flex;
+        margin-left: 3.5vw;
+    }
 
-/* on définit les sections */
-.section {
-    text-align: center;
-    margin: auto;
-    width: 280px;
-    height: 500px;
-    background-color: white;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
+    /* on arrange l'image de profil */
+    #imgProfil {
+        border-radius: 90px;
+    }
 
-.section:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
+    /* on définit les sections */
+    .section {
+        text-align: center;
+        margin: auto;
+        width: 280px;
+        height: 500px;
+        background-color: white;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        animation: apparition 4s;
+    }
 
-/* on gère les items de section */
-.un {
-    display: flex;
-}
+    .section:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
 
-.deux {
-    margin: auto;
-}
+    /* on gère les items de section */
+    .un {
+        display: flex;
+    }
 
-.section > img {
-    max-width: 150px;
-    max-height: 150px;
-}
+    .deux {
+        margin: auto;
+    }
 
-.section > h3 {
-    margin-left: auto;
-    margin-right: auto;
-}
+    .section > img {
+        max-width: 150px;
+        max-height: 150px;
+    }
 
-/* css particulier pour chaque section */
-#section1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+    .section > h3 {
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-#section2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+    /* css particulier pour chaque section */
+    #section1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
-#section3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+    #section2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-#section4 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    #section3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #section4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }

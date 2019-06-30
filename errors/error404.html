@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<meta charset='utf-8'>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<style>
+    body {background-color: rgb(255, 255, 255);}    
+</style>    
+    
+<script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/addons/p5.dom.js'></script>
+<body id='voila'>
+    <h1>ERROR 404 NON TROUVE</h1>
+</body>
+    
+<script>
+function random_bg_color() {
+    //on recupere des couleurs aleatoire
+    var r = Math.floor(Math.random() * 256);
+    var a = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+    //on prépare l'argument
+    var bgColor = "rgb(" + r + "," + a + "," + b + ")";
+  
+    //on change la couleur
+    document.body.style.background = bgColor;
+    }
+
+random_bg_color();
+    
+var canvas;
+
+function setup() {
+	background(0);
+	canvas = createCanvas(windowWidth, windowHeight);
+	//createP('Hello');
+
+}
+
+function draw() {
+	var r = random(255);
+	var a = random(255);
+	var b = random(255);
+	noStroke();
+	fill(a, r, b);
+	ellipse(mouseX, mouseY, 190, 190);
+}
+
+function keyPressed() {
+  if (keyCode == UP_ARROW) {
+    fillVal = 255;
+  } else if (keyCode == DOWN_ARROW) {
+    fillVal = 0;
+  }
+  return false; // prevent default
+}
+
+function mousePressed() {
+  clear();
+}
+</script>
+</html>

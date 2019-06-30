@@ -59,7 +59,7 @@
     footer {
         background-color: black;
         position: absolute;
-        bottom: 0px;
+        bottom: 0;
         height: 15vh;
         width: 100vw;
         z-index: 886;
@@ -122,6 +122,10 @@
         }
     }
     
+    #navId {
+        position: fixed;
+    }
+    
     /* style du body */
 
     body {
@@ -164,7 +168,7 @@
     footer {
         background-color: black;
         position: absolute;
-        bottom: 0px;
+        bottom: 0;
         height: 15vh;
         width: 100vw;
         z-index: 886;

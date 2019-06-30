@@ -87,10 +87,10 @@
                 echo "<div class='un'>";
                 echo "<img src='" .$data0['lien_visu'] ."' alt='" . $data0['nom'] . "'>";
                 for ($i=0; $i<intval($data0['niveau']); $i++) {
-                    echo "<i class='far fa-thumbs-up deux'></i>";
+                    echo "<i class='fas fa-star deux'></i>";
                 }
                 for ($j=0; $j<5-(intval($data0['niveau']));$j++) {
-                    echo "<i class='far fa-thumbs-down deux'></i>";
+                    echo "<i class='far fa-star deux'></i>";
                 }
                 echo "</div>";
             }

@@ -9,15 +9,6 @@ CREATE TABLE administrateur
     CONSTRAINT administrateur_pk PRIMARY KEY (username)
 )ENGINE = INNODB;
 
-/* table formations */
-CREATE TABLE formations
-(
-    id_formation INT NOT NULL AUTO_INCREMENT,
-    annee VARCHAR(8),
-    description text,
-    CONSTRAINT formations_pk PRIMARY KEY (id_formation)
-)ENGINE = INNODB;
-
 /* diplomes */
 CREATE TABLE diplomes
 (
@@ -55,6 +46,7 @@ CREATE TABLE projets
     nom text,
     ressenti text,
     description text,
+    dateAffiche VARCHAR(6),
     CONSTRAINT projets_pk PRIMARY KEY (id_projet)
 );
 

@@ -31,6 +31,17 @@ document.getElementById('nouveauDescDip').value = document.getElementsByClassNam
 //on met la date de la modification de diplome au premier diplome par défaut
 document.getElementById('nouveauDateDip').value = document.getElementsByClassName('dip1')[1].textContent;
 
+/* PROJETS */
+
+//on change le nom dans l'input
+document.getElementById('nouveauNomPro').value = document.getElementsByClassName("pro1")[0].textContent;
+//on change la description dans l'input
+document.getElementById('nouveauDescPro').value = document.getElementsByClassName("pro1")[1].textContent;
+//on change le ressenti dans l'input
+document.getElementById('nouveauRessentiPro').value = document.getElementsByClassName("pro1")[2].textContent;
+//on change la date dans l'input
+document.getElementById('nouveauDatePro').value = document.getElementsByClassName("pro1")[3].textContent;
+
 
 
 //* DEUXIEME PARTIE POUR LES FONCTIONS DE DINAMISME  *//
@@ -82,4 +93,20 @@ function actualisationModifDiplome() {
     document.getElementById('nouveauDescDip').value = document.getElementsByClassName("dip" + id)[0].textContent;
     //on change le nom dans l'input
     document.getElementById('nouveauDateDip').value = document.getElementsByClassName("dip" + id)[1].textContent;
+}
+
+/* pour les projets */
+
+//fonction qui permettra d'avoir les modifs de diplomes en dinamic
+function actualisationModifProjet() {
+    //on regarde quel id est sélectionné
+    let id = document.getElementById('idProAChanger').value;
+    //on change le nom dans l'input
+    document.getElementById('nouveauNomPro').value = document.getElementsByClassName("pro" + id)[0].textContent;
+    //on change la description dans l'input
+    document.getElementById('nouveauDescPro').value = document.getElementsByClassName("pro" + id)[1].textContent;
+    //on change le ressenti dans l'input
+    document.getElementById('nouveauRessentiPro').value = document.getElementsByClassName("pro" + id)[2].textContent;
+    //on change la date dans l'input
+    document.getElementById('nouveauDatePro').value = document.getElementsByClassName("pro" + id)[3].textContent;
 }

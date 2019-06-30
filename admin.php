@@ -201,8 +201,67 @@ if (!isset($_SESSION['administrateur']) || $_SESSION['administrateur'] != 'true'
         echo "</form>";
     echo "</div>";
     
+    
+    //on récupère les projets
+    $query3 = $cnx->query("SELECT * FROM projets;");
+    
+    //section expériences
+    echo "<div class='section'>";
+        echo "<table>";
+            echo"<caption>Tableau des projets</caption>";
+            echo "<tr>";
+                echo "<th>id</th>";
+                echo "<th>nom</th>";
+                echo "<th>description</th>";
+                echo "<th>ressenti</th>";
+                echo "<th>dateAffiche</th>";
+            echo "</tr>";
+        while ($projets = $query3->fetch()) {
+            echo "<tr>";
+                echo "<td>" . $projets['id_projet'] . "</td>";
+                echo "<td class='pro" . $projets['id_projet'] . "'>" . $projets['nom'] . "</td>";
+                echo "<td class='pro" . $projets['id_projet'] . "'>" . $projets['description'] . "</td>";
+                echo "<td class='pro" . $projets['id_projet'] . "'>" . $projets['ressenti'] . "</td>";
+                echo "<td class='pro" . $projets['id_projet'] . "'>" . $projets['dateAffiche'] . "</td>";
+            echo "</tr>";
+            $dernierID = $projets['id_projet'];
+        }
+        echo "</table>";
+    
+        //formulaire pour ajouter un projet
+        echo "<form action='script_php/ajoutProjet.php' method='post'>";
+            echo "<input type='submit' name='ajouterPro' value='ajouter' />";
+        echo "</form>";
+    
+        //formulaire pour supprimer un projet
+        echo "<span>Supprimer un projet</span>";
+        echo "<form action='script_php/supprProjet.php' method='post'>";
+            echo "<select name='idProASuppr'>";
+                for ($i=1; $i<=$dernierID; $i++) {
+                    echo "<option value='" . $i . "'>" . $i . "</option>";
+                }
+            echo "</select>";
+            echo "<input type='submit' name='supprimerPro' value='supprimer' />";
+        echo "</form>";
+    
+        //formulaire de modification de projets
+        echo "<span>Modifier un projet</span>";
+        echo "<form action='script_php/modifProjet.php' method='post' enctype='multipart/form-data'>";
+            echo "<select name='idProAChanger' id='idProAChanger' onchange='actualisationModifProjet()'>";
+                for ($i=1; $i<=$dernierID; $i++) {
+                    echo "<option value='" . $i . "'>" . $i . "</option>";
+                }
+            echo "</select>";
+            echo "<input type='text' name='nouveauNomPro'  id='nouveauNomPro' />";
+            echo "<input type='text' name='nouveauDescPro'  id='nouveauDescPro' />";
+            echo "<input type='text' name='nouveauRessentiPro'  id='nouveauRessentiPro' />";
+            echo "<input type='text' name='nouveauDatePro'  id='nouveauDatePro' />";
+            echo "<input type='submit' name='modifierPro' value='modifier' />";
+        echo "</form>";
+    echo "</div>";
+    
     //fin du container
-    echo "</div><br />";
+    echo "</div>";
     
     //bouton de deconnection
     echo "<form action='#' method='post'>

@@ -13,6 +13,9 @@
 <!-- style navbar -->
 <link rel='stylesheet' href='css/navbar.css'>
     
+<!-- style projets -->
+<link rel='stylesheet' href='css/projets.css'>
+    
 <!-- titre de la page -->
 <title>Projets | MARGAIL Maurin</title>
 
@@ -55,6 +58,31 @@
         <span></span>
     </div>
     <div id='sidebar'></div>
+    
+    <!--div parente de tout -->
+    <div class='container'>
+        <!-- on include la BDD -->
+        <?php include 'script_php/connectionBDD.php'; ?>
+        
+        <!-- on génère une section par projets -->
+        <?php
+        
+        $query = $cnx->query("SELECT * FROM projets ORDER BY dateAffiche DESC;");
+        while ($data = $query->fetch()) {
+            echo "<div class='section'>";
+                echo "<h3>" . $data['nom'] . "</h3>";
+                echo "<span>" . $data['dateAffiche'] . "</span>";
+                echo "<br /><br /><span>Description :</span>";
+                echo "<p>" . $data['description'] . "</p>";
+                echo "<br /><span>Ressenti :</span>";
+                echo "<p>" . $data['ressenti'] . "</p>";
+            echo "</div>";
+        }
+        
+        ?>
+        
+    <!-- fin du container -->
+    </div>
     
     <!-- footer -->
     <footer>
