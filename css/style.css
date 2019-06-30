@@ -56,14 +56,59 @@
 
     /* style du footer */
 
-    footer {
+    .footer {
         background-color: black;
         position: absolute;
         bottom: 0;
-        height: 15vh;
+        height: 20vh;
         width: 100vw;
         z-index: 886;
+        color: white;
+        text-align: center;
+        
     }
+    
+    .footer2 {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .footer2 > span {
+        font-weight: bold;
+    }
+    
+    .sociaux {
+        position: absolute;
+        right: 10px;
+        bottom: 50%;
+    }
+    
+    .sociaux > a {
+        color: white;
+    }
+    
+    .tirets {
+        display: block;
+        height: 2px;
+        margin-bottom: 3px;
+        width: 70px;
+        background-color: white;
+        transition-timing-function: linear;
+        transition-duration: 1s;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .footer2 > a {
+        color: white;
+        text-decoration: none;
+        padding-top: 0.5vh;
+    }
+    
+    .footer2 > a:hover {
+        color: #69f;
+    }
+    
 
     /* style des cards */
     .card {
@@ -174,7 +219,7 @@
 
     /* style du footer */
 
-    footer {
+    .footer {
         background-color: black;
         position: absolute;
         bottom: 0;

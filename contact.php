@@ -74,9 +74,17 @@
     </div>
 
     <!-- footer -->
-    <footer>
-
-    </footer>
+    <div class='footer'>
+        <div class='footer2'>
+            <span>Plan du site :</span>
+            <span class='tirets'></span>
+            <a href='index.php'>Accueil</a>
+            <a href='a_propos.php'>A propos</a>
+            <a href='projets.php'>Projets</a>
+            <a href='cv.php'>CV</a>
+            <a href='contact.php'>Contact</a>
+        </div>
+    </div>
 
     <!-- JQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

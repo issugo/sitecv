@@ -15,7 +15,7 @@
 
 <!-- roboto font -->
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    
+
 <!-- titre de la page -->
 <title>Accueil | MARGAIL Maurin</title>
 
@@ -54,26 +54,26 @@
         <span></span>
     </div>
     <div id='sidebar' class='opacityMax'></div>
-    
+
     <!-- titre -->
     <div class='center'>
         <h1 class='noMargin pt-5'>BIENVENU SUR LE SITE DE <strong>MARGAIL MAURIN</strong></h1>
     </div>
-    
+
     <!-- carte 1 -->
     <div class='card' id='card1'>
         <div class='card-header'>
             <span>Qui suis-je ?</span>
         </div>
         <div class='card-body'>
-            <p>Je suis MARGAIL Maurin, actuellement élève au campus <a rel='external' href='www.ynov.com/Aic-en-Provence'ynov Aix>Ynov Aix</a> et j'aspire à devenir développeur backend.</p>
+            <p>Je suis MARGAIL Maurin, actuellement élève au campus <a rel='external' href='www.ynov.com/Aic-en-Provence' ynov Aix>Ynov Aix</a> et j'aspire à devenir développeur backend.</p>
         </div>
         <div class='card-footer'>
             <span>Si vous souhaitez en savoir plus :</span>
             <a href='a_propos.php'><button class='bg-blue suivant'>a propos</button></a>
         </div>
     </div>
-    
+
     <!-- carte 2 -->
     <div class='card' id='card2'>
         <div class='card-header'>
@@ -87,11 +87,19 @@
             <a href='cv.php'><button class='bg-blue suivant'>cv</button></a>
         </div>
     </div>
-    
-    <!-- footer -->
-    <footer>
 
-    </footer>
+    <!-- footer -->
+    <div class='footer'>
+        <div class='footer2'>
+            <span>Plan du site :</span>
+            <span class='tirets'></span>
+            <a href='index.php'>Accueil</a>
+            <a href='a_propos.php'>A propos</a>
+            <a href='projets.php'>Projets</a>
+            <a href='cv.php'>CV</a>
+            <a href='contact.php'>Contact</a>
+        </div>
+    </div>
 
     <!-- JQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

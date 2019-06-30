@@ -12,7 +12,7 @@
 
 <!-- style navbar -->
 <link rel='stylesheet' href='css/navbar.css'>
-    
+
 <!-- titre de la page -->
 <title>A_propos | MARGAIL Maurin</title>
 
@@ -51,12 +51,12 @@
         <span></span>
     </div>
     <div id='sidebar'></div>
-    
+
     <!-- titre -->
     <div class='center'>
         <h1 class='noMargin pt-5'>A PROPOS DE MOI</h1>
     </div>
-    
+
     <!-- carte 1 -->
     <div class='card' id='card1'>
         <div class='card-header'>
@@ -70,7 +70,7 @@
             <a href='projets.php'><button class='bg-blue suivant'>projets</button></a>
         </div>
     </div>
-    
+
     <!-- carte 2 -->
     <div class='card' id='card2'>
         <div class='card-header'>
@@ -84,11 +84,19 @@
             <a href='cv.php'><button class='bg-blue suivant'>CV</button></a>
         </div>
     </div>
-    
-    <!-- footer -->
-    <footer>
 
-    </footer>
+    <!-- footer -->
+    <div class='footer'>
+        <div class='footer2'>
+            <span>Plan du site :</span>
+            <span class='tirets'></span>
+            <a href='index.php'>Accueil</a>
+            <a href='a_propos.php'>A propos</a>
+            <a href='projets.php'>Projets</a>
+            <a href='cv.php'>CV</a>
+            <a href='contact.php'>Contact</a>
+        </div>
+    </div>
 
     <!-- JQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
