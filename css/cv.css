@@ -1,3 +1,9 @@
+@media screnn and (max-width: 400px) {
+    body {
+        overflow-y: visible;
+    }
+}
+
 .container {
     display: flex;
 }

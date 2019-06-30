@@ -31,7 +31,6 @@ CREATE TABLE experiences
 (
     id_exp INT NOT NULL AUTO_INCREMENT,
     lieu text,
-    dateExp datetime,
     dateAffichage VARCHAR(11),
     description text,
     ressenti text,
@@ -46,7 +45,16 @@ CREATE TABLE competences
     niveau ENUM ('1', '2', '3', '4', '5'),
     lien_visu text,
     CONSTRAINT competences_pk PRIMARY KEY (id_comp)
-    
 )ENGINE = INNODB;
+
+/* table projets */
+CREATE TABLE projets
+(
+    id_projet INT NOT NULL AUTO_INCREMENT,
+    nom text,
+    ressenti text,
+    description text,
+    CONSTRAINT projets_pk PRIMARY KEY (id_projet)
+);
 
 /* 5 tables au total */
