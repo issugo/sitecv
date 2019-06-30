@@ -41,10 +41,6 @@
             <li class='nav-item'>
                 <a href='cv.php' class='nav-link'>CV</a>
             </li>
-            <!-- item tarifs -->
-            <li class='nav-item'>
-                <a href='tarifs.php' class='nav-link'>Tarifs</a>
-            </li>
             <!-- item contact -->
             <li class='nav-item'>
                 <a href='contact.php' class='nav-link'>Contact</a>
@@ -128,6 +124,10 @@
             }
             ?>
         </div>
+    </div>
+    
+    <div class='fin'>
+        <span>Vous pouvez me contacter sur ma page de <a href='contact.php'>contact</a></span>
     </div>
 
     <!-- footer -->

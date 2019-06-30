@@ -168,4 +168,11 @@
         flex-direction: column;
         justify-content: center;
     }
+    
+    .fin {
+        text-align: center;
+        margin: auto;
+        background-color: white;
+        margin-top: 5vh;
+    }
 }

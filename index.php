@@ -41,10 +41,6 @@
             <li class='nav-item'>
                 <a href='cv.php' class='nav-link'>CV</a>
             </li>
-            <!-- item tarifs -->
-            <li class='nav-item'>
-                <a href='tarifs.php' class='nav-link'>Tarifs</a>
-            </li>
             <!-- item contact -->
             <li class='nav-item'>
                 <a href='contact.php' class='nav-link'>Contact</a>
@@ -84,11 +80,11 @@
             <span>On se connait ?!</span>
         </div>
         <div class='card-body'>
-            <p>Si vous me connaissez déjà, vous savez que je travaille dans l'association <strong>CreatiWeb</strong> et que nolus faisons des sites web pour vous</p>
+            <p>Si vous me connaissez déjà, vous voulez peut-être voir mes améliorations !</p>
         </div>
         <div class='card-footer'>
-            <span>Nos tarifs :</span>
-            <a href='tarifs.php'><button class='bg-blue suivant'>tarifs</button></a>
+            <span>mon CV :</span>
+            <a href='cv.php'><button class='bg-blue suivant'>cv</button></a>
         </div>
     </div>
     
