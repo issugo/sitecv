@@ -70,6 +70,7 @@
         <?php include 'script_php/connectionBDD.php'; ?>
         <!-- première partie -->
         <div class='section' id='section1'>
+            <h3>MOI</h3>
             <img src='img/maurin.jpg' alt='maurin tête' id='imgProfil'>
             <span>MARGAIL MAURIN</span>
             <p>Bonjour, je m'appelle Maurin MARGAIL, j'adore développer et faire du sport. J'aime aussi apprendre régulièrement à utiliser de nouvelles techologies.</p>
@@ -77,6 +78,7 @@
         
         <!-- deuxième partie -->
         <div class='section' id='section2'>
+            <h3>COMPÉTENCES</h3>
             <?php
             
             $query0 = $cnx->query("SELECT * FROM competences;");
@@ -97,7 +99,18 @@
         
         <!-- troisième partie -->
         <div class='section' id='section3'>
-            <h4>Projets :</h4>
+            <h3>EXPERIENCES</h3>
+            <?php
+            $query1 = $cnx->query("SELECT * FROM experiences;");
+            while ($data1 = $query1->fetch()) {
+                echo "<div>";
+                    echo $data1['lieu'];
+                    echo $data1['dateAffichage'];
+                    echo $data1['description'];
+                    echo $data1['ressenti'];
+                echo "</div>";
+            }
+            ?>
         </div>
     </div>
 
