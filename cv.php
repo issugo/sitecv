@@ -68,7 +68,8 @@
     <div class='container'>
         <!-- on include la BDD -->
         <?php include 'script_php/connectionBDD.php'; ?>
-        <!-- première partie -->
+        
+        <!-- première partie description -->
         <div class='section' id='section1'>
             <h3>MOI</h3>
             <img src='img/maurin.jpg' alt='maurin tête' id='imgProfil'>
@@ -76,7 +77,7 @@
             <p>Bonjour, je m'appelle Maurin MARGAIL, j'adore développer et faire du sport. J'aime aussi apprendre régulièrement à utiliser de nouvelles techologies.</p>
         </div>
         
-        <!-- deuxième partie -->
+        <!-- deuxième partie  competences -->
         <div class='section' id='section2'>
             <h3>COMPÉTENCES</h3>
             <?php
@@ -97,7 +98,7 @@
             ?>
         </div>
         
-        <!-- troisième partie -->
+        <!-- troisième partie  experiences-->
         <div class='section' id='section3'>
             <h3>EXPERIENCES</h3>
             <?php
@@ -108,6 +109,21 @@
                     echo $data1['dateAffichage'];
                     echo $data1['description'];
                     echo $data1['ressenti'];
+                echo "</div>";
+            }
+            ?>
+        </div>
+        
+        <!-- quatrième partie  diplomes-->
+        <div class='section' id='section4'>
+            <h3>DIPLOMES</h3>
+            <?php
+            $query2 = $cnx->query("SELECT * FROM diplomes ORDER BY annee DESC;");
+            while ($data2 = $query2->fetch()) {
+                echo "<div>";
+                    echo $data2['annee'];
+                    echo " : ";
+                    echo $data2['description'];
                 echo "</div>";
             }
             ?>

@@ -16,8 +16,8 @@ if (isset($_SESSION['administrateur']) && $_SESSION['administrateur'] == 'true')
         //on modiife le tout avec ou non l'image
         if (!isset($_FILES)) {
             //on modifie tout sauf le visu
-            $query0 = $cnx->prepare("UPDATE competences SET nom = :nom, niveau = :niveau");
-            $query0->execute(['nom' => $nom, 'niveau' => $niveau]);
+            $query0 = $cnx->prepare("UPDATE competences SET nom = :nom, niveau = :niveau WHERE id_comp = :id");
+            $query0->execute(['nom' => $nom, 'niveau' => $niveau, 'id' => $id]);
         } else {
             var_dump($_FILES);
             //on recupere l'image sur le serveur
@@ -45,5 +45,4 @@ if (isset($_SESSION['administrateur']) && $_SESSION['administrateur'] == 'true')
     http_response_code(403);
     exit();
 }
-
 ?>

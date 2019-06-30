@@ -23,6 +23,7 @@ CREATE TABLE diplomes
 (
     id_diplome INT NOT NULL AUTO_INCREMENT,
     description text,
+    annee VARCHAR(4),
     CONSTRAINT diplomes_pk PRIMARY KEY (id_diplome)
 )ENGINE = INNODB;
 

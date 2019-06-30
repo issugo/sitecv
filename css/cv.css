@@ -6,6 +6,7 @@
 
 .container {
     display: flex;
+    margin-left: 3.5vw;
 }
 
 /* on arrange l'image de profil */
@@ -17,7 +18,7 @@
 .section {
     text-align: center;
     margin: auto;
-    width: 300px;
+    width: 280px;
     height: 500px;
     background-color: white;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -41,6 +42,11 @@
     max-height: 150px;
 }
 
+.section > h3 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* css particulier pour chaque section */
 #section1 {
     display: flex;
@@ -50,6 +56,18 @@
 }
 
 #section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#section3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#section4 {
     display: flex;
     flex-direction: column;
     justify-content: center;

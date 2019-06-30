@@ -24,6 +24,13 @@ document.getElementById('nouveauDescExp').value = document.getElementsByClassNam
 //on met le lieu de la modification d'experiences a la premiere experience par défaut
 document.getElementById('nouveauRessentiExp').value = document.getElementsByClassName('exp1')[3].textContent;
 
+/* DIPLOMES */
+
+//on met la description de la modification de diplome au premier diplome par défaut
+document.getElementById('nouveauDescDip').value = document.getElementsByClassName('dip1')[0].textContent;
+//on met la date de la modification de diplome au premier diplome par défaut
+document.getElementById('nouveauDateDip').value = document.getElementsByClassName('dip1')[1].textContent;
+
 
 
 //* DEUXIEME PARTIE POUR LES FONCTIONS DE DINAMISME  *//
@@ -63,4 +70,16 @@ function actualisationModifExperience() {
     document.getElementById('nouveauDescExp').value = document.getElementsByClassName("exp" + id)[2].textContent;
     //on change le nom dans l'input
     document.getElementById('nouveauRessentiExp').value = document.getElementsByClassName("exp" + id)[3].textContent;
+}
+
+/* pour les diplomes */
+
+//fonction qui permettra d'avoir les modifs de diplomes en dinamic
+function actualisationModifDiplome() {
+    //on regarde quel id est sélectionné
+    let id = document.getElementById('idDipAChanger').value;
+    //on change la description dans l'input
+    document.getElementById('nouveauDescDip').value = document.getElementsByClassName("dip" + id)[0].textContent;
+    //on change le nom dans l'input
+    document.getElementById('nouveauDateDip').value = document.getElementsByClassName("dip" + id)[1].textContent;
 }

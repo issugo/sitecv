@@ -22,6 +22,9 @@ if (!isset($_SESSION['administrateur']) || $_SESSION['administrateur'] != 'true'
     //lien de style
     echo "<link rel='stylesheet' type='text/css' href='css/admin.css'>";
     
+    //div qui contient tout et gère le flex
+    echo "<div class='container'>";
+    
     //on se connecte à la BDD
     include 'script_php/connectionBDD.php';
     
@@ -144,6 +147,62 @@ if (!isset($_SESSION['administrateur']) || $_SESSION['administrateur'] != 'true'
             echo "<input type='submit' name='modifierExp' value='modifier' />";
         echo "</form>";
     echo "</div>";
+    
+    
+    //on récupère les diplomes
+    $query2 = $cnx->query("SELECT * FROM diplomes;");
+    
+    //section expériences
+    echo "<div class='section'>";
+        echo "<table>";
+            echo"<caption>Tableau des diplomes</caption>";
+            echo "<tr>";
+                echo "<th>id</th>";
+                echo "<th>description</th>";
+                echo "<th>date</th>";
+            echo "</tr>";
+        while ($diplomes = $query2->fetch()) {
+            echo "<tr>";
+                echo "<td>" . $diplomes['id_diplome'] . "</td>";
+                echo "<td class='dip" . $diplomes['id_diplome'] . "'>" . $diplomes['description'] . "</td>";
+                echo "<td class='dip" . $diplomes['id_diplome'] . "'>" . $diplomes['annee'] . "</td>";
+            echo "</tr>";
+            $dernierID = $diplomes['id_diplome'];
+        }
+        echo "</table>";
+    
+        //formulaire pour ajouter un diplome
+        echo "<form action='script_php/ajoutDiplome.php' method='post'>";
+            echo "<input type='submit' name='ajouterDip' value='ajouter' />";
+        echo "</form>";
+    
+        //formulaire pour supprimer un diplome
+        echo "<span>Supprimer un diplome</span>";
+        echo "<form action='script_php/supprDiplome.php' method='post'>";
+            echo "<select name='idDipASuppr'>";
+                for ($i=1; $i<=$dernierID; $i++) {
+                    echo "<option value='" . $i . "'>" . $i . "</option>";
+                }
+            echo "</select>";
+            echo "<input type='submit' name='supprimerDip' value='supprimer' />";
+        echo "</form>";
+    
+        //formulaire de modification de diplome
+        echo "<span>Modifier un diplome</span>";
+        echo "<form action='script_php/modifDiplome.php' method='post' enctype='multipart/form-data'>";
+            echo "<select name='idDipAChanger' id='idDipAChanger' onchange='actualisationModifDiplome()'>";
+                for ($i=1; $i<=$dernierID; $i++) {
+                    echo "<option value='" . $i . "'>" . $i . "</option>";
+                }
+            echo "</select>";
+            echo "<input type='text' name='nouveauDescDip'  id='nouveauDescDip' />";
+            echo "<input type='text' name='nouveauDateDip'  id='nouveauDateDip' />";
+            echo "<input type='submit' name='modifierDip' value='modifier' />";
+        echo "</form>";
+    echo "</div>";
+    
+    //fin du container
+    echo "</div><br />";
     
     //bouton de deconnection
     echo "<form action='#' method='post'>
