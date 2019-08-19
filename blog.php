@@ -13,11 +13,11 @@
 <!-- style navbar -->
 <link rel='stylesheet' href='css/navbar.css'>
     
-<!-- style projets -->
-<link rel='stylesheet' href='css/projets.css'>
+<!-- style blog -->
+<link rel='stylesheet' href='css/blog.css'>
     
 <!-- titre de la page -->
-<title>Projets | MARGAIL Maurin</title>
+<title>Blog | MARGAIL Maurin</title>
 
 <body>
     <!-- barre de navigation -->
@@ -60,7 +60,7 @@
     <div id='sidebar'></div>
     
     <div class='center'>
-        <h1 class='noMargin pt-5 pb-5'>PROJETS</h1>
+        <h1 class='noMargin pt-5 pb-5'>BLOG</h1>
     </div>
     
     <!--div parente de tout -->
@@ -68,22 +68,39 @@
         <!-- on include la BDD -->
         <?php include 'script_php/connectionBDD.php'; ?>
         
-        <!-- on génère une section par projets -->
-        <?php
+        <!-- on débute la timeline -->
+        <div class='timeline'>
+            <!-- on génère une section par projets -->
+            <?php
         
-        $query = $cnx->query("SELECT * FROM projets ORDER BY dateAffiche DESC;");
-        while ($data = $query->fetch()) {
-            echo "<div class='section'>";
-                echo "<h3>" . $data['nom'] . "</h3>";
-                echo "<span>" . $data['dateAffiche'] . "</span>";
-                echo "<br /><br /><span>Description :</span>";
-                echo "<p>" . $data['description'] . "</p>";
-                echo "<br /><span>Ressenti :</span>";
-                echo "<p>" . $data['ressenti'] . "</p>";
-            echo "</div>";
-        }
-        
-        ?>
+            $query = $cnx->query("SELECT * FROM articles;");
+            $bool = 0;
+            while ($data = $query->fetch()) {
+                if ($bool == 0) {
+                    echo "<div class='bloc right'>";
+                        echo "<div class='content'>";
+                            echo "<h2>" . $data['titre'] . "</h2>";
+                            echo "<p>" . $data['texte'] . "</p>";
+                        echo "</div>";
+                    echo "</div>";
+                    $bool = 1;
+                } else {
+                    if ($bool == 1) {
+                        echo "<div class='bloc left'>";
+                            echo "<div class='content'>";
+                                echo "<h2>" . $data['titre'] . "</h2>";
+                                echo "<p>" . $data['texte'] . "</p>";
+                            echo "</div>";
+                        echo "</div>";
+                        $bool = 0;
+                    }
+                }
+                
+            }
+
+            ?>
+        <!-- fin timeline -->
+        </div>
         
     <!-- fin du container -->
     </div>

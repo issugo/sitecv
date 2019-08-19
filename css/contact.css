@@ -1,6 +1,6 @@
 /* contact form */
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 700px) {
 
     article,
     aside,
@@ -638,7 +638,7 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 700px) {
 
     article,
     aside,

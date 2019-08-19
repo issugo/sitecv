@@ -1,4 +1,4 @@
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 700px) {
     /* boutton de la nav */
 
     #burger-button {
@@ -106,7 +106,7 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 700px) {
     /* boutton de la nav */
 
     #burger-button {

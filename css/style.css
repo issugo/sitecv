@@ -1,4 +1,4 @@
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 700px) {
 
     @keyframes apparition-gauche {
         0% {
@@ -60,7 +60,7 @@
         background-color: black;
         position: absolute;
         bottom: 0;
-        height: 20vh;
+        height: 22vh;
         width: 100vw;
         z-index: 886;
         color: white;
@@ -154,27 +154,7 @@
     }
 }
 
-@media screen and (max-width: 400px) {
-    
-    @keyframes apparition-gauche {
-        0% {
-            left: -50%;
-        }
-
-        100% {
-            left: 10%;
-        }
-    }
-
-    @keyframes apparition-droite {
-        0% {
-            right: -50%;
-        }
-
-        100% {
-            right: 10%;
-        }
-    }
+@media screen and (max-width: 700px) {
     
     #navId {
         position: fixed;
@@ -231,9 +211,8 @@
     .card {
         background-color: white;
         border-radius: 2px;
-        max-width: 300px;
-        max-height: 300px;
-        min-width: 350px;
+        max-width: 280px;
+        max-height: 280px;
         min-height: 130px;
         position: absolute;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);

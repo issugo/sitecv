@@ -41,6 +41,10 @@
             <li class='nav-item'>
                 <a href='cv.php' class='nav-link'>CV</a>
             </li>
+            <!-- item blog -->
+            <li class='nav-item'>
+                <a href='blog.php' class='nav-link'>blog</a>
+            </li>
             <!-- item contact -->
             <li class='nav-item'>
                 <a href='contact.php' class='nav-link'>Contact</a>
@@ -98,6 +102,7 @@
             <a href='projets.php'>Projets</a>
             <a href='cv.php'>CV</a>
             <a href='contact.php'>Contact</a>
+            <a href='blog.php'>Blog</a>
         </div>
     </div>
 

@@ -205,7 +205,7 @@ if (!isset($_SESSION['administrateur']) || $_SESSION['administrateur'] != 'true'
     //on récupère les projets
     $query3 = $cnx->query("SELECT * FROM projets;");
     
-    //section expériences
+    //section projets
     echo "<div class='section'>";
         echo "<table>";
             echo"<caption>Tableau des projets</caption>";
@@ -257,6 +257,61 @@ if (!isset($_SESSION['administrateur']) || $_SESSION['administrateur'] != 'true'
             echo "<input type='text' name='nouveauRessentiPro'  id='nouveauRessentiPro' />";
             echo "<input type='text' name='nouveauDatePro'  id='nouveauDatePro' />";
             echo "<input type='submit' name='modifierPro' value='modifier' />";
+        echo "</form>";
+    echo "</div>";
+    
+    //on récupère les projets
+    $query4 = $cnx->query("SELECT * FROM articles;");
+    
+    //section projets
+    echo "<div class='section'>";
+        echo "<table>";
+            echo"<caption>Tableau des articles</caption>";
+            echo "<tr>";
+                echo "<th>id</th>";
+                echo "<th>titre</th>";
+                echo "<th>texte</th>";
+                echo "<th>lanceur</th>";
+            echo "</tr>";
+        while ($articles = $query4->fetch()) {
+            echo "<tr>";
+                echo "<td>" . $articles['id_article'] . "</td>";
+                echo "<td class='art" . $articles['id_article'] . "'>" . $articles['titre'] . "</td>";
+                echo "<td class='art" . $articles['id_article'] . "'>" . $articles['texte'] . "</td>";
+                echo "<td class='art" . $articles['id_article'] . "'>" . $articles['lanceur'] . "</td>";
+            echo "</tr>";
+            $dernierID = $articles['id_article'];
+        }
+        echo "</table>";
+    
+        //formulaire pour ajouter un article
+        echo "<form action='script_php/ajoutArticle.php' method='post'>";
+            echo "<input type='submit' name='ajouterArt' value='ajouter' />";
+        echo "</form>";
+    
+        //formulaire pour supprimer un article
+        echo "<span>Supprimer un article</span>";
+        echo "<form action='script_php/supprArticle.php' method='post'>";
+            echo "<select name='idArtASuppr'>";
+                for ($i=1; $i<=$dernierID; $i++) {
+                    echo "<option value='" . $i . "'>" . $i . "</option>";
+                }
+            echo "</select>";
+            echo "<input type='submit' name='supprimerArt' value='supprimer' />";
+        echo "</form>";
+    
+        //formulaire de modification d'article
+        echo "<span>Modifier un article</span>";
+    echo "<form action='script_php/modifArticle.php' method='post' enctype='multipart/form-data'>";
+            echo "<select name='idArtAChanger' id='idArtAChanger' onchange='actualisationModifArticle()'>";
+                for ($i=1; $i<=$dernierID; $i++) {
+                    echo "<option value='" . $i . "'>" . $i . "</option>";
+                }
+            echo "</select>";
+            echo "<input type='text' name='nouveauTitreArt' id='nouveauTitreArt' />";
+            echo "<input type='text' name='nouveauTexteArt' id='nouveauTexteArt' />";
+            echo "<input type='text' name='nouveauLanceurArt' id='nouveauLanceurArt' />";
+            echo "<input type='submit' name='modifierArt' value='modifier' />";
         echo "</form>";
     echo "</div>";
     

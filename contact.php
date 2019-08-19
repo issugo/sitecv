@@ -40,6 +40,10 @@
             <li class='nav-item'>
                 <a href='cv.php' class='nav-link'>CV</a>
             </li>
+            <!-- item blog -->
+            <li class='nav-item'>
+                <a href='blog.php' class='nav-link'>blog</a>
+            </li>
             <!-- item contact -->
             <li class='nav-item'>
                 <a href='contact.php' class='nav-link'>Contact</a>
@@ -83,6 +87,7 @@
             <a href='projets.php'>Projets</a>
             <a href='cv.php'>CV</a>
             <a href='contact.php'>Contact</a>
+            <a href='blog.php'>Blog</a>
         </div>
     </div>
 
@@ -102,7 +107,7 @@
         $email = htmlentities($_POST['email']);
         $message = htmlentities($_POST['message']);
         //on envoie le mail
-        mail("contact@maurin-margail.ovh", "question depuis mon site", "question de $nom, $email\n$message");
+        mail("maurin.margail@ynov.com", "question depuis mon site", "question de $nom, $email\n$message");
         //on prévient de l'envoie du mail
         echo "<script>alert('Votre mail a bien été envoyé')</script>";
     }

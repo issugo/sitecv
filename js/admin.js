@@ -69,7 +69,7 @@ function actualisationModifCompetence() {
 
 /* pour les experiences */
 
-//fonction qui permettra d'avoir les modifs de competence en dinamic
+//fonction qui permettra d'avoir les modifs d'experience en dinamic
 function actualisationModifExperience() {
     //on regarde quel id est sélectionné
     let id = document.getElementById('idExpAChanger').value;
@@ -97,7 +97,7 @@ function actualisationModifDiplome() {
 
 /* pour les projets */
 
-//fonction qui permettra d'avoir les modifs de diplomes en dinamic
+//fonction qui permettra d'avoir les modifs de projets en dinamic
 function actualisationModifProjet() {
     //on regarde quel id est sélectionné
     let id = document.getElementById('idProAChanger').value;
@@ -109,4 +109,16 @@ function actualisationModifProjet() {
     document.getElementById('nouveauRessentiPro').value = document.getElementsByClassName("pro" + id)[2].textContent;
     //on change la date dans l'input
     document.getElementById('nouveauDatePro').value = document.getElementsByClassName("pro" + id)[3].textContent;
+}
+
+//fonction qui permettra d'avoir les modifs d'articles du blog en dinamic
+function actualisationModifProjet() {
+    //on regarde quel id est sélectionné
+    let id = document.getElementById('idArtAChanger').value;
+    //on change le titre dans l'input
+    document.getElementById('nouveauTitreArt').value = document.getElementsByClassName("art" + id)[0].textContent;
+    //on change la texte dans l'input
+    document.getElementById('nouveauTexteArt').value = document.getElementsByClassName("art" + id)[1].textContent;
+    //on change le lanceur dans l'input
+    document.getElementById('nouveauLanceurArt').value = document.getElementsByClassName("art" + id)[2].textContent;
 }

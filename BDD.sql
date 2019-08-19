@@ -50,4 +50,14 @@ CREATE TABLE projets
     CONSTRAINT projets_pk PRIMARY KEY (id_projet)
 );
 
-/* 5 tables au total */
+/* table articles */
+CREATE TABLE articles
+(
+    id_article INT NOT NULL AUTO_INCREMENT,
+    titre text,
+    texte text,
+    lanceur text,
+    CONSTRAINT articles_pk PRIMARY KEY (id_article)
+);
+
+/* 6 tables au total */
